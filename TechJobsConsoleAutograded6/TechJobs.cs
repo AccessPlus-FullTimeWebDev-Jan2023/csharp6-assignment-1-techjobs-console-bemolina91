@@ -135,7 +135,23 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+            //Console.WriteLine("PrintJobs is not implemented yet");
+            if(someJobs.Count == 0)
+            {
+                Console.WriteLine("No results");
+            }
+            else
+            {
+                foreach (Dictionary<string, string> job in someJobs)
+                {
+                    Console.WriteLine(Environment.NewLine + "*****");
+                    foreach (KeyValuePair<string, string> item in job)
+                    {
+                        Console.WriteLine($"{item.Key}: {item.Value}");
+                    }
+                    Console.WriteLine("*****");
+                }
+            }
         }
     }
 }
